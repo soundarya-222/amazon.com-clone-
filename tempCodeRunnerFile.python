@@ -1,0 +1,15 @@
+class IoTDevice:
+    def __init__(self, model, gps, battery_capacity):
+        self.model = model  # Model of the ESP32
+        self.gps = gps      # Type of GPS module
+        self.battery_capacity = battery_capacity  # Battery capacity in mAh
+
+    def device_info(self):
+        return f"Model: {self.model}, GPS: {self.gps}, Battery: {self.battery_capacity}mAh"
+
+def main():
+    esp32_device = IoTDevice(model="ESP32 WROOM", gps="Neo 6m GPS", battery_capacity=200)
+    print(esp32_device.device_info())
+
+if __name__ == "__main__":
+    main()
